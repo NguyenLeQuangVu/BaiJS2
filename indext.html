@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Bài 2 JS</title>
+        <style>
+            #money{
+                width: 400px;
+                height: 300px;
+                font-size: 50px;
+                color: yellow;
+                background-color: black ;
+            }
+            #name{
+                width: 400px;
+                height: 300px;
+                font-size: 50px;
+                color: yellow;
+                background-color: blue ;
+            }
+            #hello{
+                width: 400px;
+                height: 300px;
+                font-size: 40px;
+                color: rgb(145, 11, 11);
+                background-color: hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="name">Click Vào Đây Để Cho Tôi Biết Bạn Thích Môn Gì</div>
+        <div id="money">Click Vào Đây Để Biết Tổng Tiền Lãi Và Gốc Năm 3</div>
+        <div id="hello">Click Here để Cho Quý Danh</div>
+        <script>
+            let number = 23;
+            var $string_1 = 'FED01';
+            let boolea_1 = true;
+            let abcxy_z = null;
+            let $f11 = undefined;
+            var arr = [3,4,8,2,4,7,1];  
+            let $1stObjec = {name: 'tên', age: 18, gender: 'female'};
+            let $funs = () => {alert('đây là function')};
+            let month = 2000000;
+            let year = month * 12;
+            let lai = 6 / 100;
+            let $theThirdYear = 'Tiền Lãi Của Bạn Là ';
+            let theFirstYear = (year * lai) + year;
+            var theSecondYear = (theFirstYear + year) * lai + year + theFirstYear;
+            let theThirdYear =  (theSecondYear + year) * lai + year + theSecondYear;
+            document.getElementById("money").onclick = () =>{
+                document.getElementById("money").innerText = "Tiền Lãi + Gốc Của Bạn Là " + theThirdYear + " VND";
+                alert("Tiền Trong Tài Khoản " + theThirdYear + " Đồng")
+            }
+            document.getElementById("name").onclick = () =>{
+                document.getElementById("name").innerText = "hihi";
+                let $Subbject = prompt ("Môn Học Bạn Thích Là");
+                let ak47 = "công nghệ thông tin";
+                if($Subbject===ak47){
+                    alert("True, Tôi Cũng Vậy");
+                    document.getElementById("name").innerText = "Mình Cũng Thích Bạn Vậy!";
+                }
+            }
+            document.getElementById("hello").onclick = () =>{
+                let namae = prompt("Tên Bạn Là Gì?");
+                document.getElementById("hello").innerText = "Hello  " + namae + "   ,Today is     " + new Date();
+            }
+        </script>
+    </body>
+</html>
